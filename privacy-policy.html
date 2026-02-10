@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TenAIs Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f8f8;
+      --surface: #ffffff;
+      --text: #1b2431;
+      --text-muted: #777777;
+      --accent: #1854ff;
+      --accent-light: #e8eeff;
+      --border: #e5e5e5;
+      --spacing-xs: 6px;
+      --spacing-sm: 10px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
+      --spacing-xxl: 48px;
+      --radius-sm: 8px;
+      --radius-md: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), #7096ff);
+    }
+
+    header {
+      background: var(--surface);
+      padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-lg);
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    header .app-name {
+      margin: var(--spacing-xs) 0 0;
+      font-size: 15px;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    header .last-updated {
+      margin: var(--spacing-xs) 0 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+    }
+
+    .toc {
+      background: var(--accent-light);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-lg) var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .toc h2 {
+      margin: 0 0 var(--spacing-sm);
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--accent);
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .toc li {
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .toc a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    section {
+      margin-bottom: var(--spacing-xl);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    h2 {
+      margin: 0 0 var(--spacing-md);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    h3 {
+      margin: var(--spacing-md) 0 var(--spacing-sm);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    p {
+      margin: 0 0 var(--spacing-md);
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 var(--spacing-md);
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: var(--spacing-xs);
+      font-size: 15px;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--spacing-md) 0;
+      font-size: 14px;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: var(--spacing-sm) var(--spacing-md);
+      border: 1px solid var(--border);
+    }
+
+    th {
+      background: var(--accent-light);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .highlight-box {
+      background: #fffbe6;
+      border-left: 4px solid #faad14;
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-md) var(--spacing-lg);
+      margin: var(--spacing-md) 0;
+      font-size: 14px;
+    }
+
+    .info-box {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-md) var(--spacing-lg);
+      margin: var(--spacing-md) 0;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: var(--spacing-lg);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
+      }
+
+      .card {
+        padding: var(--spacing-lg);
+      }
+
+      table {
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        padding: var(--spacing-xs) var(--spacing-sm);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bar" aria-hidden="true"></div>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p class="app-name">TenAIs Studio</p>
+    <p class="last-updated">Last updated: February 10, 2026</p>
+  </header>
+  <main>
+    <!-- Table of Contents -->
+    <nav class="toc">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#data-controller">Data Controller &amp; Developer Information</a></li>
+        <li><a href="#data-collect">Data We Collect</a></li>
+        <li><a href="#how-we-use">How We Use Your Data</a></li>
+        <li><a href="#legal-basis">Legal Basis for Processing</a></li>
+        <li><a href="#sharing">Sharing &amp; Third-Party Services</a></li>
+        <li><a href="#cloud-storage">Cloud Storage &amp; File Uploads</a></li>
+        <li><a href="#security">Data Security</a></li>
+        <li><a href="#retention">Data Retention &amp; Automatic Deletion</a></li>
+        <li><a href="#your-rights">Your Rights &amp; Account Controls</a></li>
+        <li><a href="#account-deletion">Account Deletion</a></li>
+        <li><a href="#children">Children's Privacy</a></li>
+        <li><a href="#permissions">App Permissions</a></li>
+        <li><a href="#cookies">Cookies &amp; Tracking Technologies</a></li>
+        <li><a href="#notifications">Notifications &amp; Communications</a></li>
+        <li><a href="#international">International Data Transfers</a></li>
+        <li><a href="#california">California Privacy Rights (CCPA)</a></li>
+        <li><a href="#eu">European Privacy Rights (GDPR)</a></li>
+        <li><a href="#changes">Changes to This Policy</a></li>
+        <li><a href="#grievance">Grievance Redressal</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ol>
+    </nav>
+
+    <div class="card">
+      <!-- 1. Introduction -->
+      <section id="introduction">
+        <h2>1. Introduction</h2>
+        <p>Welcome to <strong>TenAIs Studio</strong> ("we", "us", "our"). This Privacy Policy explains how we collect,
+          use, disclose, and safeguard your information when you use the TenAIs Studio mobile application (Android &amp;
+          iOS) and its associated backend services (collectively, "the App").</p>
+        <p>TenAIs Studio is a hackathon management platform that enables participants, coordinators, judges, and
+          administrators to organize, participate in, and evaluate hackathon events. The App facilitates team formation,
+          project submissions, judging, leaderboards, and related collaboration features.</p>
+        <p><strong>Effective date:</strong> February 10, 2026. By creating an account or using the App, you acknowledge
+          that you have read and understood this Privacy Policy. If you do not agree, please discontinue use of the App
+          immediately.</p>
+      </section>
+
+      <!-- 2. Data Controller -->
+      <section id="data-controller">
+        <h2>2. Data Controller &amp; Developer Information</h2>
+        <p>The data controller responsible for your personal data is:</p>
+        <ul>
+          <li><strong>Developer / Organization:</strong> TenAIs</li>
+          <li><strong>Email:</strong> <a href="mailto:support@tenais.co.in">support@tenais.co.in</a></li>
+          <li><strong>Website:</strong> <a href="https://tenais.co.in" target="_blank" rel="noopener">tenais.co.in</a>
+          </li>
+        </ul>
+        <p>All data processing described in this policy is carried out by or on behalf of TenAIs.</p>
+      </section>
+
+      <!-- 3. Data We Collect -->
+      <section id="data-collect">
+        <h2>3. Data We Collect</h2>
+        <p>We collect only the data necessary to provide the App's functionality. We categorize this information as
+          follows:</p>
+
+        <h3>3.1 Account &amp; Identity Data <small>(Required)</small></h3>
+        <table>
+          <tr>
+            <th>Data Field</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>First name &amp; last name</td>
+            <td>Display name, team membership</td>
+          </tr>
+          <tr>
+            <td>Email address</td>
+            <td>Authentication, account recovery, communications</td>
+          </tr>
+          <tr>
+            <td>Password</td>
+            <td>Account security (stored as a one-way hash; we never store plaintext)</td>
+          </tr>
+          <tr>
+            <td>Role (participant, coordinator, judge, admin)</td>
+            <td>Access control and feature personalization</td>
+          </tr>
+          <tr>
+            <td>Email verification status</td>
+            <td>OTP-based email confirmation</td>
+          </tr>
+        </table>
+
+        <h3>3.2 Profile Data <small>(Optional &mdash; provided at your discretion)</small></h3>
+        <table>
+          <tr>
+            <th>Data Field</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>Bio (up to 1,000 characters)</td>
+            <td>Public profile presentation</td>
+          </tr>
+          <tr>
+            <td>Gender</td>
+            <td>Profile personalization</td>
+          </tr>
+          <tr>
+            <td>Phone / mobile number</td>
+            <td>Contact information, phone verification</td>
+          </tr>
+          <tr>
+            <td>Social links (LinkedIn, GitHub, X/Twitter, website)</td>
+            <td>Networking and team discovery</td>
+          </tr>
+          <tr>
+            <td>Education (degree type, institute, field of study, graduation year)</td>
+            <td>Profile enrichment, eligibility</td>
+          </tr>
+          <tr>
+            <td>Work experience</td>
+            <td>Profile enrichment</td>
+          </tr>
+          <tr>
+            <td>Skills (up to 5) &amp; interests</td>
+            <td>Hackathon recommendations, team matching</td>
+          </tr>
+          <tr>
+            <td>Contact details (city, emergency contact)</td>
+            <td>Event logistics, safety</td>
+          </tr>
+          <tr>
+            <td>Profile photo (avatar)</td>
+            <td>User identification</td>
+          </tr>
+        </table>
+
+        <h3>3.3 Hackathon &amp; Activity Data</h3>
+        <ul>
+          <li><strong>Team data:</strong> Team name, description, membership roster, join requests, invite codes, team
+            role (leader or member).</li>
+          <li><strong>Submission data:</strong> Project title, description, technologies used, project links, demo
+            links, uploaded assets (presentations, images, business model canvases).</li>
+          <li><strong>Evaluation data:</strong> Scores, criteria-level ratings, and feedback provided by judges (stored
+            only in the context of the assigned hackathon).</li>
+          <li><strong>Leaderboard data:</strong> Aggregated scores, rankings, and prize allocations.</li>
+          <li><strong>Bookmarks:</strong> Hackathons you have bookmarked for quick access.</li>
+        </ul>
+
+        <h3>3.4 Uploaded Files &amp; Media</h3>
+        <p>When you upload content (avatars, hackathon banners, submission assets like PPTs, PDFs, or images), the
+          following is stored:</p>
+        <ul>
+          <li>Filename, content type, and file size.</li>
+          <li>Cloud storage reference (blob name, container, storage account).</li>
+          <li>Identity of the uploader (your user ID).</li>
+        </ul>
+        <p>Accepted file types: JPEG, PNG, GIF, WebP (images); PDF, PPT, PPTX (documents). Size limits: avatars up to 5
+          MB, images up to 10 MB, documents up to 50 MB.</p>
+
+        <h3>3.5 Device &amp; Technical Data</h3>
+        <table>
+          <tr>
+            <th>Data Field</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>IP address</td>
+            <td>Rate limiting, abuse prevention, refresh-token security</td>
+          </tr>
+          <tr>
+            <td>User-Agent string (device type, OS, browser)</td>
+            <td>Session management, refresh-token association</td>
+          </tr>
+          <tr>
+            <td>Authentication tokens (JWT access &amp; refresh tokens)</td>
+            <td>Maintained on-device in encrypted storage (SecureStore)</td>
+          </tr>
+          <tr>
+            <td>API request timestamps</td>
+            <td>Server logs, debugging</td>
+          </tr>
+        </table>
+        <div class="info-box">
+          <strong>No advertising or analytics SDKs.</strong> We do not integrate any third-party analytics, advertising,
+          or crash-reporting SDKs within the App. Over-the-air updates may be delivered via Expo's update service.
+        </div>
+
+        <h3>3.6 Data We Do <strong>NOT</strong> Collect</h3>
+        <ul>
+          <li>We do <strong>not</strong> access your contacts, call logs, or SMS messages.</li>
+          <li>We do <strong>not</strong> collect precise or background location data.</li>
+          <li>We do <strong>not</strong> record audio, video, or screen content.</li>
+          <li>We do <strong>not</strong> read your clipboard or calendar.</li>
+          <li>We do <strong>not</strong> collect financial or payment information through the App.</li>
+          <li>We do <strong>not</strong> use device identifiers (IMEI, MAC address, Android Advertising ID) for
+            tracking.</li>
+        </ul>
+      </section>
+
+      <!-- 4. How We Use Your Data -->
+      <section id="how-we-use">
+        <h2>4. How We Use Your Data</h2>
+        <table>
+          <tr>
+            <th>Purpose</th>
+            <th>Data Used</th>
+          </tr>
+          <tr>
+            <td>Account creation &amp; authentication</td>
+            <td>Name, email, password hash, JWT tokens</td>
+          </tr>
+          <tr>
+            <td>Email verification &amp; password reset</td>
+            <td>Email, OTP (hashed with SHA-256, auto-expires in 10 minutes)</td>
+          </tr>
+          <tr>
+            <td>Profile display &amp; team discovery</td>
+            <td>Profile data, avatar, skills, interests, social links</td>
+          </tr>
+          <tr>
+            <td>Hackathon participation</td>
+            <td>Team data, submissions, bookmarks</td>
+          </tr>
+          <tr>
+            <td>Judging &amp; evaluation</td>
+            <td>Evaluation scores, feedback, criteria ratings</td>
+          </tr>
+          <tr>
+            <td>Leaderboard generation</td>
+            <td>Aggregated scores and rankings</td>
+          </tr>
+          <tr>
+            <td>In-app notifications</td>
+            <td>Activity events (team joins, request status, hackathon phase changes, recommendations)</td>
+          </tr>
+          <tr>
+            <td>Email communications</td>
+            <td>Email address (for OTPs, password resets, and account-related notices)</td>
+          </tr>
+          <tr>
+            <td>Security &amp; abuse prevention</td>
+            <td>IP address, user-agent, rate-limiting counters</td>
+          </tr>
+          <tr>
+            <td>Service improvement &amp; debugging</td>
+            <td>Server logs, API request metadata</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 5. Legal Basis -->
+      <section id="legal-basis">
+        <h2>5. Legal Basis for Processing</h2>
+        <p>We process your personal data on the following legal grounds:</p>
+        <ul>
+          <li><strong>Contractual necessity:</strong> To provide the App's core services (account management, hackathon
+            participation, team features, submissions, evaluations).</li>
+          <li><strong>Consent:</strong> For optional profile data you voluntarily provide, email communications, and
+            push notifications (which you may withdraw at any time).</li>
+          <li><strong>Legitimate interests:</strong> For security measures (rate limiting, fraud prevention), service
+            improvement, and debugging.</li>
+          <li><strong>Legal obligation:</strong> To comply with applicable laws, regulations, or legal processes.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Sharing -->
+      <section id="sharing">
+        <h2>6. Sharing &amp; Third-Party Services</h2>
+        <p><strong>We do not sell, rent, or trade your personal data to any third party.</strong></p>
+        <p>We share data only in the following limited circumstances:</p>
+
+        <h3>6.1 Infrastructure &amp; Service Providers</h3>
+        <table>
+          <tr>
+            <th>Provider</th>
+            <th>Purpose</th>
+            <th>Data Shared</th>
+          </tr>
+          <tr>
+            <td>Microsoft Azure Blob Storage</td>
+            <td>Secure file storage (avatars, submissions, banners)</td>
+            <td>Uploaded files and storage metadata</td>
+          </tr>
+          <tr>
+            <td>SendGrid (Twilio) / Nodemailer SMTP</td>
+            <td>Transactional emails (OTP, password reset, notifications)</td>
+            <td>Email address, email content</td>
+          </tr>
+          <tr>
+            <td>MongoDB Atlas (or self-hosted)</td>
+            <td>Database hosting</td>
+            <td>All application data (encrypted in transit and at rest)</td>
+          </tr>
+          <tr>
+            <td>Expo (EAS)</td>
+            <td>Over-the-air app updates</td>
+            <td>App version metadata (no personal data)</td>
+          </tr>
+        </table>
+        <p>All service providers are bound by their respective privacy policies and data processing agreements. We
+          select providers that maintain industry-standard security practices.</p>
+
+        <h3>6.2 Within the App</h3>
+        <ul>
+          <li><strong>Team members &amp; coordinators</strong> can see your public profile information (name, avatar,
+            skills) within their hackathon context.</li>
+          <li><strong>Judges</strong> can see submission content and team details for hackathons they have been assigned
+            to evaluate.</li>
+          <li><strong>Leaderboard data</strong> (team name, scores, rankings) may be visible to all hackathon
+            participants when published by a coordinator.</li>
+        </ul>
+
+        <h3>6.3 Legal &amp; Safety</h3>
+        <p>We may disclose your information if required to do so by law, or in good faith belief that such action is
+          necessary to:</p>
+        <ul>
+          <li>Comply with a legal obligation or court order.</li>
+          <li>Protect and defend our rights or property.</li>
+          <li>Prevent fraud or address security issues.</li>
+          <li>Protect the personal safety of users or the public.</li>
+        </ul>
+      </section>
+
+      <!-- 7. Cloud Storage -->
+      <section id="cloud-storage">
+        <h2>7. Cloud Storage &amp; File Uploads</h2>
+        <p>Files you upload (avatars, hackathon banners, submission documents and images) are stored in
+          <strong>Microsoft Azure Blob Storage</strong>. Specifically:</p>
+        <ul>
+          <li>Each file receives a unique identifier (UUID) and is stored with its original content type.</li>
+          <li>Access to files is controlled via time-limited Shared Access Signatures (SAS tokens) &mdash; URLs expire
+            and cannot be used indefinitely.</li>
+          <li>Storage containers are private by default; files are not publicly indexed.</li>
+          <li>When you request account deletion, all files associated with your account are queued for deletion from
+            cloud storage.</li>
+        </ul>
+      </section>
+
+      <!-- 8. Security -->
+      <section id="security">
+        <h2>8. Data Security</h2>
+        <p>We implement multiple layers of security to protect your data:</p>
+        <ul>
+          <li><strong>Encryption in transit:</strong> All data transferred between the App and our servers uses
+            HTTPS/TLS encryption.</li>
+          <li><strong>Password security:</strong> Passwords are never stored in plaintext. They are irreversibly hashed
+            using industry-standard algorithms before storage.</li>
+          <li><strong>OTP &amp; token hashing:</strong> One-time passwords and password reset tokens are hashed with
+            SHA-256 before storage &mdash; we never store the raw values.</li>
+          <li><strong>JWT authentication:</strong> Access tokens are short-lived. Refresh tokens are hashed and stored
+            server-side with device association (IP + user-agent) and are automatically invalidated upon expiry.</li>
+          <li><strong>On-device security:</strong> Authentication tokens are stored in Expo SecureStore (hardware-backed
+            encrypted storage on supported devices).</li>
+          <li><strong>Rate limiting:</strong> API endpoints are protected by rate limiters (e.g., login attempts are
+            capped at 5 per 15 minutes per IP+email combination) to prevent brute-force attacks.</li>
+          <li><strong>Role-based access control:</strong> Server-side authorization ensures users can only access data
+            and actions permitted for their role (participant, coordinator, judge, admin).</li>
+          <li><strong>Input validation:</strong> All user inputs are validated and sanitized on the server to prevent
+            injection attacks.</li>
+          <li><strong>Automatic token expiry:</strong> Expired refresh tokens and OTPs are automatically purged from the
+            database via TTL (Time-To-Live) indexes.</li>
+        </ul>
+        <div class="highlight-box">
+          While we strive to use commercially acceptable means to protect your personal data, no method of electronic
+          transmission or storage is 100% secure. We cannot guarantee absolute security.
+        </div>
+      </section>
+
+      <!-- 9. Data Retention -->
+      <section id="retention">
+        <h2>9. Data Retention &amp; Automatic Deletion</h2>
+        <p>We retain your data only as long as necessary for the purposes described in this policy:</p>
+        <table>
+          <tr>
+            <th>Data Type</th>
+            <th>Retention Period</th>
+          </tr>
+          <tr>
+            <td>Account &amp; profile data</td>
+            <td>Until you request account deletion</td>
+          </tr>
+          <tr>
+            <td>Hackathon, team &amp; submission data</td>
+            <td>Retained for the lifetime of the hackathon record; anonymized upon account deletion</td>
+          </tr>
+          <tr>
+            <td>Evaluation &amp; leaderboard data</td>
+            <td>Retained for the lifetime of the hackathon record</td>
+          </tr>
+          <tr>
+            <td>In-app notifications</td>
+            <td><strong>Automatically deleted after 90 days</strong> via TTL index</td>
+          </tr>
+          <tr>
+            <td>OTP codes (email verification, password reset)</td>
+            <td><strong>Automatically deleted upon expiry</strong> (typically 10 minutes) via TTL index</td>
+          </tr>
+          <tr>
+            <td>Password reset tokens</td>
+            <td><strong>Automatically deleted upon expiry</strong> (typically 10 minutes) via TTL index</td>
+          </tr>
+          <tr>
+            <td>Refresh tokens (sessions)</td>
+            <td><strong>Automatically deleted upon expiry</strong> (typically 7 days) via TTL index</td>
+          </tr>
+          <tr>
+            <td>Uploaded files (Azure Blob Storage)</td>
+            <td>Until associated record is deleted or account deletion is requested</td>
+          </tr>
+          <tr>
+            <td>Server logs (IP, user-agent)</td>
+            <td>Kept for a limited period for debugging; not permanently stored</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 10. Your Rights -->
+      <section id="your-rights">
+        <h2>10. Your Rights &amp; Account Controls</h2>
+        <p>You have the following rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Access:</strong> You can view all personal data associated with your account directly in the App
+            (Profile, Settings).</li>
+          <li><strong>Correction:</strong> You can update your profile data at any time through the Edit Profile screen.
+          </li>
+          <li><strong>Deletion:</strong> You can request deletion of your account and all associated personal data by
+            emailing us (see Section 11).</li>
+          <li><strong>Portability:</strong> You may request a copy of your personal data in a structured,
+            machine-readable format by contacting us.</li>
+          <li><strong>Withdrawal of consent:</strong> You may withdraw consent for optional data processing at any time
+            (e.g., remove optional profile fields, disable notifications).</li>
+          <li><strong>Restriction:</strong> You may request that we restrict processing of your personal data in certain
+            circumstances.</li>
+          <li><strong>Objection:</strong> You may object to processing based on our legitimate interests.</li>
+        </ul>
+        <p>To exercise any right not available directly through the App, please email us at <a
+            href="mailto:support@tenais.co.in">support@tenais.co.in</a>. We will respond within 7-14 days.</p>
+      </section>
+
+      <!-- 11. Account Deletion -->
+      <section id="account-deletion">
+        <h2>11. Account Deletion</h2>
+        <p>You have the right to request deletion of your account at any time by emailing <a
+            href="mailto:support@tenais.co.in">support@tenais.co.in</a>. Upon account deletion:</p>
+        <ul>
+          <li>Your personal data (name, email, phone, profile details, social links, education, experience, skills,
+            interests, contact details) is <strong>permanently erased</strong>.</li>
+          <li>Your uploaded avatar and files are deleted from cloud storage.</li>
+          <li>All active sessions (refresh tokens) are revoked and removed.</li>
+          <li>Your user references in teams, submissions, and evaluations are replaced with a <strong>"Deleted User"
+              placeholder</strong> to maintain data integrity of hackathon records without retaining your identity.</li>
+          <li>Notifications associated with your account are removed.</li>
+        </ul>
+        <div class="info-box">
+          <strong>How to delete your account:</strong> Send an email to <a
+            href="mailto:support@tenais.co.in">support@tenais.co.in</a> from the email address associated with your
+          account, with the subject line <strong>"Account Deletion Request"</strong>. Please include your registered
+          name for verification. We will confirm receipt and process the deletion within 7-14 days.
+        </div>
+      </section>
+
+      <!-- 12. Children's Privacy -->
+      <section id="children">
+        <h2>12. Children's Privacy</h2>
+        <p>TenAIs Studio is <strong>not directed at children under the age of 13</strong> (or the applicable minimum age
+          in your jurisdiction). We do not knowingly collect personal data from children under 13.</p>
+        <p>If you are a parent or guardian and believe your child has provided us with personal data, please contact us
+          at <a href="mailto:support@tenais.co.in">support@tenais.co.in</a>. We will take steps to delete such data from
+          our servers promptly.</p>
+        <p>If we become aware that we have collected personal data from a child under 13 without verified parental
+          consent, we will delete that information as quickly as possible.</p>
+      </section>
+
+      <!-- 13. App Permissions -->
+      <section id="permissions">
+        <h2>13. App Permissions</h2>
+        <p>The App requests only the minimum device permissions required, and only at the time of actual use:</p>
+        <table>
+          <tr>
+            <th>Permission</th>
+            <th>When Requested</th>
+            <th>Purpose</th>
+          </tr>
+          <tr>
+            <td>Camera</td>
+            <td>When you choose to take a photo for your avatar or submission</td>
+            <td>Capture photos for upload</td>
+          </tr>
+          <tr>
+            <td>Photo Library / Storage</td>
+            <td>When you choose to pick an image from your gallery</td>
+            <td>Select existing images for upload</td>
+          </tr>
+          <tr>
+            <td>Internet / Network</td>
+            <td>Always (required)</td>
+            <td>Communicate with backend servers</td>
+          </tr>
+        </table>
+        <div class="info-box">
+          <strong>No background permissions.</strong> We do not request access to location, microphone, contacts, SMS,
+          call logs, or any background services. All permissions are requested only at the point of use and can be
+          revoked through your device settings at any time.
+        </div>
+      </section>
+
+      <!-- 14. Cookies & Tracking -->
+      <section id="cookies">
+        <h2>14. Cookies &amp; Tracking Technologies</h2>
+        <p><strong>The mobile App does not use cookies.</strong></p>
+        <p>For session management, we use JWT (JSON Web Tokens) stored in encrypted on-device storage &mdash; not
+          browser cookies. We do not use:</p>
+        <ul>
+          <li>Web beacons or tracking pixels.</li>
+          <li>Fingerprinting technologies.</li>
+          <li>Third-party advertising or analytics cookies.</li>
+          <li>Cross-app or cross-site tracking.</li>
+        </ul>
+        <p>If you access our privacy policy or other web pages through a browser, standard server logs may record your
+          IP address and browser information for security purposes.</p>
+      </section>
+
+      <!-- 15. Notifications -->
+      <section id="notifications">
+        <h2>15. Notifications &amp; Communications</h2>
+
+        <h3>15.1 In-App Notifications</h3>
+        <p>We send in-app notifications for the following activities:</p>
+        <ul>
+          <li>A team member joins your team via invite code.</li>
+          <li>Someone sends a join request to your team.</li>
+          <li>Your team join request is accepted or rejected.</li>
+          <li>A hackathon you are participating in changes phase (e.g., from "open" to "running", to "judging").</li>
+          <li>Hackathon recommendations based on your interests.</li>
+        </ul>
+        <p>Notifications are stored server-side and <strong>automatically deleted after 90 days</strong>. You can mark
+          notifications as read or clear them from within the App.</p>
+
+        <h3>15.2 Email Communications</h3>
+        <p>We send emails <strong>only for essential account operations</strong>:</p>
+        <ul>
+          <li>Email verification OTPs during registration.</li>
+          <li>Password reset OTPs when you request a password change.</li>
+          <li>Critical account and security notices.</li>
+        </ul>
+        <p>We do <strong>not</strong> send marketing emails, newsletters, or promotional content. Emails are sent from
+          <strong>noreply@tenais.co.in</strong> via SendGrid or SMTP.</p>
+      </section>
+
+      <!-- 16. International Transfers -->
+      <section id="international">
+        <h2>16. International Data Transfers</h2>
+        <p>Your data may be processed and stored on servers located outside your country of residence. Our
+          infrastructure providers (Microsoft Azure, MongoDB Atlas, SendGrid) operate data centers in multiple regions.
+        </p>
+        <p>When data is transferred across borders, we ensure that appropriate safeguards are in place, including:</p>
+        <ul>
+          <li>Standard Contractual Clauses (SCCs) with service providers.</li>
+          <li>Encryption of data in transit and at rest.</li>
+          <li>Use of service providers that maintain certifications such as SOC 2, ISO 27001, or equivalent.</li>
+        </ul>
+      </section>
+
+      <!-- 17. CCPA -->
+      <section id="california">
+        <h2>17. California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you have additional rights under the California Consumer Privacy Act
+          (CCPA):</p>
+        <ul>
+          <li><strong>Right to Know:</strong> You can request details about the categories and specific pieces of
+            personal data we have collected about you.</li>
+          <li><strong>Right to Delete:</strong> You can request deletion of your personal data, subject to certain
+            exceptions.</li>
+          <li><strong>Right to Non-Discrimination:</strong> We will not discriminate against you for exercising your
+            privacy rights.</li>
+          <li><strong>No Sale of Data:</strong> We do <strong>not</strong> sell personal data as defined by the CCPA. We
+            have not sold personal data in the preceding 12 months.</li>
+        </ul>
+        <p>To exercise your CCPA rights, email us at <a href="mailto:support@tenais.co.in">support@tenais.co.in</a> with
+          the subject "CCPA Request".</p>
+      </section>
+
+      <!-- 18. GDPR -->
+      <section id="eu">
+        <h2>18. European Privacy Rights (GDPR)</h2>
+        <p>If you are in the European Economic Area (EEA), United Kingdom, or Switzerland, you have rights under the
+          General Data Protection Regulation (GDPR), including:</p>
+        <ul>
+          <li>Right of access (Article 15)</li>
+          <li>Right to rectification (Article 16)</li>
+          <li>Right to erasure / "Right to be forgotten" (Article 17)</li>
+          <li>Right to restrict processing (Article 18)</li>
+          <li>Right to data portability (Article 20)</li>
+          <li>Right to object (Article 21)</li>
+          <li>Right to lodge a complaint with a supervisory authority</li>
+        </ul>
+        <p>To exercise your GDPR rights, email us at <a href="mailto:support@tenais.co.in">support@tenais.co.in</a> with
+          the subject "GDPR Request". We will respond within 7-14 days.</p>
+      </section>
+
+      <!-- 19. Changes -->
+      <section id="changes">
+        <h2>19. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal
+          requirements, or other factors. When we make material changes:</p>
+        <ul>
+          <li>We will update the "Last updated" date at the top of this page.</li>
+          <li>We will notify you via an in-app notification or email (for significant changes).</li>
+          <li>Material changes will take effect 7-14 days after notice, unless otherwise required by law.</li>
+        </ul>
+        <p>Your continued use of the App after the effective date of any updated Privacy Policy constitutes your
+          acceptance of the changes. We encourage you to review this page periodically.</p>
+      </section>
+
+      <!-- 20. Grievance Redressal -->
+      <section id="grievance">
+        <h2>20. Grievance Redressal</h2>
+        <p>If you have any complaints or concerns regarding data processing, you may contact our Grievance Officer:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:support@tenais.co.in">support@tenais.co.in</a></li>
+          <li><strong>Subject line:</strong> "Privacy Grievance"</li>
+          <li><strong>Response time:</strong> We will acknowledge your complaint within 48 hours and resolve it within
+            7-14 days.</li>
+        </ul>
+        <p>If you are not satisfied with our response, you may have the right to lodge a complaint with the relevant
+          data protection authority in your jurisdiction.</p>
+      </section>
+
+      <!-- 21. Contact -->
+      <section id="contact">
+        <h2>21. Contact Us</h2>
+        <p>For any privacy-related requests, questions, or concerns, please reach out to us:</p>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:support@tenais.co.in">support@tenais.co.in</a></li>
+          <li><strong>Subject:</strong> "Privacy Inquiry" (or use the specific subject lines mentioned above for
+            CCPA/GDPR/grievance requests)</li>
+        </ul>
+        <p>We aim to respond to all inquiries within 48 hours on business days.</p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 TenAIs. All rights reserved.
+  </footer>
+</body>
+
+</html>

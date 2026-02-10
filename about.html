@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — TenAIs Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f8f8;
+      --surface: #ffffff;
+      --text: #1b2431;
+      --text-muted: #777777;
+      --accent: #1854ff;
+      --accent-light: #e8eeff;
+      --orange: #ff6f10;
+      --orange-light: #fff4ec;
+      --border: #e5e5e5;
+      --spacing-xs: 6px;
+      --spacing-sm: 10px;
+      --spacing-md: 16px;
+      --spacing-lg: 24px;
+      --spacing-xl: 32px;
+      --spacing-xxl: 48px;
+      --radius-sm: 8px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    .bar {
+      height: 4px;
+      background: linear-gradient(90deg, var(--orange), var(--accent));
+    }
+    header {
+      background: var(--surface);
+      padding: var(--spacing-xxl) var(--spacing-lg) var(--spacing-xl);
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    header h1 span {
+      color: var(--orange);
+    }
+    header .tagline {
+      margin: var(--spacing-sm) 0 0;
+      font-size: 15px;
+      color: var(--text-muted);
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
+    }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
+    }
+    section {
+      margin-bottom: var(--spacing-xl);
+      padding-bottom: var(--spacing-lg);
+      border-bottom: 1px solid #f0f0f0;
+    }
+    section:last-child { margin-bottom: 0; border-bottom: none; padding-bottom: 0; }
+    h2 {
+      margin: 0 0 var(--spacing-md);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    h3 {
+      margin: var(--spacing-md) 0 var(--spacing-sm);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    p {
+      margin: 0 0 var(--spacing-md);
+      font-size: 15px;
+      color: var(--text);
+    }
+    p:last-child { margin-bottom: 0; }
+    ul {
+      margin: 0 0 var(--spacing-md);
+      padding-left: 1.25rem;
+    }
+    li {
+      margin-bottom: var(--spacing-xs);
+      font-size: 15px;
+      color: var(--text);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md);
+      margin: var(--spacing-md) 0;
+    }
+    .feature-item {
+      background: var(--bg);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-md);
+    }
+    .feature-item .icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--spacing-xs);
+    }
+    .feature-item h3 {
+      margin: 0 0 4px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .feature-item p {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .highlight-box {
+      background: var(--orange-light);
+      border-left: 4px solid var(--orange);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-md) var(--spacing-lg);
+      margin: var(--spacing-md) 0;
+      font-size: 14px;
+    }
+    .info-box {
+      background: var(--accent-light);
+      border-left: 4px solid var(--accent);
+      border-radius: var(--radius-sm);
+      padding: var(--spacing-md) var(--spacing-lg);
+      margin: var(--spacing-md) 0;
+      font-size: 14px;
+    }
+    .links-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-sm);
+      margin-top: var(--spacing-md);
+    }
+    .links-row a {
+      display: inline-block;
+      padding: var(--spacing-sm) var(--spacing-lg);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .links-row a:hover { opacity: 0.85; text-decoration: none; }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+    }
+    footer {
+      text-align: center;
+      padding: var(--spacing-lg);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    @media (max-width: 600px) {
+      main { padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl); }
+      .card { padding: var(--spacing-lg); }
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bar" aria-hidden="true"></div>
+  <header>
+    <h1>About <span>TenAIs</span> Studio</h1>
+    <p class="tagline">Empowering rural talent to global impact &mdash; one hackathon at a time.</p>
+  </header>
+  <main>
+    <div class="card">
+
+      <!-- What is Studio -->
+      <section>
+        <h2>What is TenAIs Studio?</h2>
+        <p><strong>TenAIs Studio</strong> is a hackathon management platform built to organize, run, and evaluate innovation hackathons seamlessly. Whether you're a student competing in your first hackathon, a coordinator managing an event, or a judge evaluating submissions &mdash; Studio brings every part of the hackathon experience into one mobile app.</p>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <div class="icon">&#127942;</div>
+            <h3>Hackathon Discovery</h3>
+            <p>Browse, bookmark, and register for upcoming hackathons.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">&#129309;</div>
+            <h3>Team Formation</h3>
+            <p>Create teams, share invite codes, and manage join requests.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">&#128640;</div>
+            <h3>Project Submissions</h3>
+            <p>Submit presentations, demos, and project links with your team.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">&#9878;&#65039;</div>
+            <h3>Judging &amp; Evaluation</h3>
+            <p>Criteria-based scoring, feedback, and automated leaderboards.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">&#128276;</div>
+            <h3>Real-time Notifications</h3>
+            <p>Stay updated on team activity, phase changes, and recommendations.</p>
+          </div>
+          <div class="feature-item">
+            <div class="icon">&#128100;</div>
+            <h3>Rich Profiles</h3>
+            <p>Showcase your skills, education, experience, and social links.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About TenAIs -->
+      <section>
+        <h2>About TenAIs</h2>
+        <p>TenAIs Studio is a product of <strong>TenAI's Consulting India Pvt. Ltd.</strong> &mdash; a social enterprise headquartered in Nashik, India. TenAIs was founded on a single mission:</p>
+        <div class="highlight-box">
+          <strong>&ldquo;Nurturing creative talent from rural India to provide excellent services to global clients and build world-class products.&rdquo;</strong>
+        </div>
+        <p>TenAIs believes that every mind deserves the opportunity to innovate, create, and make an impact &mdash; regardless of geography or economic background. The organization collaborates with educational institutions and impact-driven individuals to identify hidden talent, empower them with opportunities, and enable them to deliver exceptional work on a global stage.</p>
+        <h3>What TenAIs Does</h3>
+        <ul>
+          <li><strong>Studio:</strong> Sourcing top talent from rural India through hackathons, innovation camps, and acceleration programs &mdash; equipping them with the tools to develop and execute innovative ideas.</li>
+          <li><strong>Consulting:</strong> Harnessing rural talent to develop efficient, cost-effective, and innovative solutions for global clients.</li>
+          <li><strong>Products:</strong> Building innovative, forward-thinking products for businesses and consumers, crafted by Studio's top talent.</li>
+        </ul>
+      </section>
+
+      <!-- Studio Initiatives -->
+      <section>
+        <h2>Studio Initiatives</h2>
+        <p>The Studio app is the digital backbone of TenAIs' on-ground programs:</p>
+        <ul>
+          <li><strong>Hackathons for Rural Innovators:</strong> Hackathons across rural, tier-2, and tier-3 regions to identify creative and technical talent. Students learn Agile methodology, Design Thinking, Elevator Pitching, and Business Model Canvas.</li>
+          <li><strong>Innovation Camps (8th&ndash;12th Std):</strong> 1.5-day immersive experiences that ignite creativity and entrepreneurial confidence among school and junior college students.</li>
+          <li><strong>Inclusive Camps:</strong> Specially structured sessions for differently abled students, ensuring accessibility, confidence building, and meaningful participation.</li>
+          <li><strong>Talent Acceleration &amp; Internship:</strong> Selected students progress into project-based internships working on live prototypes in Agentic AI, UI/UX Design, Automation, and Market Research.</li>
+          <li><strong>College Partnerships &amp; Mentorship:</strong> Collaborations with educational institutions and retired professors, AI pioneers, and industry experts who mentor the next generation.</li>
+        </ul>
+      </section>
+
+      <!-- Contact & Links -->
+      <section>
+        <h2>Get in Touch</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:support@tenais.co.in">support@tenais.co.in</a></li>
+          <li><strong>Address:</strong> TenAI's Consulting India Pvt. Ltd., Shop 1 P34, Sawarkar Nagar, Satpur, Nashik, India</li>
+        </ul>
+        <div class="links-row">
+          <a class="btn-primary" href="https://tenais.in/" target="_blank" rel="noopener">Visit TenAIs Website</a>
+          <a class="btn-outline" href="https://tenais.in/studio" target="_blank" rel="noopener">Learn More About Studio</a>
+        </div>
+        <div class="links-row" style="margin-top: var(--spacing-sm);">
+          <a href="https://www.linkedin.com/company/tenais-consulting-india-pvt-ltd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.instagram.com/tenais_consulting_india/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://x.com/Tenais_India" target="_blank" rel="noopener">X (Twitter)</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+  <footer>
+    &copy; 2026 TenAI's Consulting India Pvt. Ltd. All rights reserved. Trademark Registered &reg; TenAI's
+  </footer>
+</body>
+</html>
