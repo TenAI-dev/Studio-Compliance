@@ -73,89 +73,69 @@
       color: var(--text-muted);
     }
 
-    .doc-layout {
-      display: flex;
-      flex-direction: column;
-      max-width: 1400px;
+    main {
+      max-width: 720px;
       margin: 0 auto;
       padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-xxl);
-      gap: var(--spacing-xl);
-    }
-
-    .toc-sidebar {
-      background: var(--surface);
-      border-radius: var(--radius-md);
-      padding: var(--spacing-lg) var(--spacing-md);
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-    }
-
-    .toc-sidebar h2 {
-      margin: 0 0 var(--spacing-md);
-      font-size: 0.875rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--text-muted);
-    }
-
-    .toc-sidebar ol {
-      margin: 0;
-      padding-left: 1rem;
-      list-style: none;
-    }
-
-    .toc-sidebar li {
-      margin-bottom: 2px;
-      font-size: 14px;
-    }
-
-    .toc-sidebar a {
-      color: var(--text);
-      text-decoration: none;
-      display: block;
-      padding: var(--spacing-xs) 0;
-      border-left: 2px solid transparent;
-      padding-left: var(--spacing-sm);
-      margin-left: -2px;
-      transition: color 0.15s, border-color 0.15s;
-    }
-
-    .toc-sidebar a:hover,
-    .toc-sidebar a:focus {
-      color: var(--accent);
-      border-left-color: var(--accent);
-    }
-
-    .doc-content {
-      flex: 1;
-      min-width: 0;
     }
 
     .card {
       background: var(--surface);
       border-radius: var(--radius-md);
-      padding: var(--spacing-xl);
+      padding: 0;
       margin-bottom: var(--spacing-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
     }
 
-    section {
-      margin-bottom: var(--spacing-xl);
-      padding-bottom: var(--spacing-lg);
+    .collapse-section {
       border-bottom: 1px solid #f0f0f0;
     }
 
-    section:last-child {
-      margin-bottom: 0;
+    .collapse-section:last-child {
       border-bottom: none;
-      padding-bottom: 0;
     }
 
-    h2 {
-      margin: 0 0 var(--spacing-md);
-      font-size: 1.25rem;
+    .collapse-section summary {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-sm);
+      padding: var(--spacing-md) var(--spacing-xl);
+      font-size: 1.125rem;
       font-weight: 700;
       color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+      transition: background 0.15s;
+    }
+
+    .collapse-section summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .collapse-section summary::before {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-left: 5px solid var(--accent);
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      margin-right: var(--spacing-xs);
+      transition: transform 0.2s;
+    }
+
+    .collapse-section[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .collapse-section summary:hover {
+      background: var(--accent-light);
+    }
+
+    .collapse-content {
+      padding: var(--spacing-md) var(--spacing-xl) var(--spacing-xl);
     }
 
     p {
@@ -195,45 +175,17 @@
       color: var(--text-muted);
     }
 
-    @media (min-width: 769px) {
-      .doc-layout {
-        flex-direction: row;
-        align-items: flex-start;
-        padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-xxl);
-        gap: var(--spacing-xxl);
-      }
-
-      .toc-sidebar {
-        position: sticky;
-        top: var(--spacing-lg);
-        width: 260px;
-        max-height: calc(100vh - var(--spacing-xl));
-        overflow-y: auto;
-      }
-
-      .doc-content {
-        max-width: 720px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .toc-sidebar {
-        background: var(--accent-light);
-        border: none;
-      }
-
-      .toc-sidebar h2 {
-        color: var(--accent);
-      }
-    }
-
     @media (max-width: 600px) {
-      .doc-layout {
+      main {
         padding: var(--spacing-lg) var(--spacing-md) var(--spacing-xl);
       }
 
-      .card {
-        padding: var(--spacing-lg);
+      .collapse-section summary {
+        padding: var(--spacing-md) var(--spacing-lg);
+      }
+
+      .collapse-content {
+        padding: 0 var(--spacing-lg) var(--spacing-lg);
       }
     }
   </style>
@@ -247,110 +199,111 @@
     <p class="last-updated">Last updated: February 10, 2026</p>
   </header>
   <main>
-    <div class="doc-layout">
-      <aside class="toc-sidebar" aria-label="Table of contents">
-        <h2>Contents</h2>
-        <ol>
-          <li><a href="#introduction">Introduction</a></li>
-          <li><a href="#information-we-collect">Information We Collect</a></li>
-          <li><a href="#how-we-use">How We Use Your Information</a></li>
-          <li><a href="#sharing">Sharing of Information</a></li>
-          <li><a href="#security">Data Security</a></li>
-          <li><a href="#retention">Data Retention</a></li>
-          <li><a href="#your-rights">Your Rights and Choices</a></li>
-          <li><a href="#children">Children's Privacy</a></li>
-          <li><a href="#changes">Changes to This Policy</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ol>
-      </aside>
-
-      <div class="doc-content">
-        <div class="card">
-      <section id="introduction">
-        <h2>1. Introduction</h2>
-        <p>Welcome to TenAi's Studio ("we", "our", or "us"). Your privacy matters to us. This Privacy Policy explains, in simple terms, how we collect, use, and protect your information when you use the TenAi's Studio app and related services.</p>
-        <p>TenAi's Studio is a platform designed to help users organize, participate in, and manage hackathons, including team collaboration, project submissions, and evaluations. By using our app, you agree to the practices described in this policy.</p>
-      </section>
-
-      <section id="information-we-collect">
-        <h2>2. Information We Collect</h2>
-        <p>We collect only the information necessary to operate and improve the platform. This may include:</p>
-        <ul>
-          <li>Account information such as your name, email address, and role within the app</li>
-          <li>Profile details you choose to provide, like a bio, skills, education, or social links</li>
-          <li>Hackathon activity data, including team participation, submissions, and evaluations</li>
-          <li>Files and media you upload, such as profile images or project documents</li>
-          <li>Basic technical information, such as device and log data, used to keep the app secure and running smoothly</li>
-        </ul>
-        <p>We do not collect unnecessary data such as contacts, precise location, call logs, messages, or payment information.</p>
-      </section>
-
-      <section id="how-we-use">
-        <h2>3. How We Use Your Information</h2>
-        <p>We use your information to:</p>
-        <ul>
-          <li>Create and manage your account</li>
-          <li>Enable hackathon participation, team collaboration, and project submissions</li>
-          <li>Display profiles and leaderboards within hackathons</li>
-          <li>Send important account-related communications</li>
-          <li>Maintain platform security and prevent misuse</li>
-          <li>Improve the reliability and performance of our services</li>
-        </ul>
-        <p>We do not use your data for advertising or marketing purposes.</p>
-      </section>
-
-      <section id="sharing">
-        <h2>4. Sharing of Information</h2>
-        <p>We do not sell your personal data.</p>
-        <p>Your information may be shared only:</p>
-        <ul>
-          <li>With trusted service providers who help us run the app (such as hosting and email services)</li>
-          <li>With other users inside a hackathon context (for example, team members or judges viewing relevant submissions)</li>
-          <li>When required by law or to protect the safety and integrity of our platform</li>
-        </ul>
-        <p>All partners are required to follow appropriate privacy and security standards.</p>
-      </section>
-
-      <section id="security">
-        <h2>5. Data Security</h2>
-        <p>We take reasonable and industry-standard measures to protect your information from unauthorized access, loss, or misuse. While no digital system can be guaranteed to be 100% secure, we work hard to always safeguard your data.</p>
-      </section>
-
-      <section id="retention">
-        <h2>6. Data Retention</h2>
-        <p>We keep your information only for as long as it is needed to provide our services or comply with legal requirements. You may request account deletion at any time, after which your personal data will be removed or anonymized where appropriate.</p>
-      </section>
-
-      <section id="your-rights">
-        <h2>7. Your Rights and Choices</h2>
-        <p>You have the right to:</p>
-        <ul>
-          <li>Access and update your personal information</li>
-          <li>Request deletion of your account</li>
-          <li>Withdraw consent for optional information</li>
-          <li>Request a copy of your data</li>
-        </ul>
-        <p>You can manage most of your information directly within the app. For additional requests, you can contact us using the details below.</p>
-      </section>
-
-      <section id="children">
-        <h2>8. Children's Privacy</h2>
-        <p>TenAi's Studio is not intended for children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has provided us with information, please contact us and we will take appropriate action.</p>
-      </section>
-
-      <section id="changes">
-        <h2>9. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. When we do, we'll update the "Last updated" date and notify users if the changes are significant. Continued use of the app means you accept the updated policy.</p>
-      </section>
-
-      <section id="contact">
-        <h2>10. Contact Us</h2>
-        <p>If you have questions or concerns about this Privacy Policy or your data, you can contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:support@tenais.co.in">support@tenais.co.in</a></p>
-        <p>We aim to respond promptly to all privacy-related inquiries.</p>
-      </section>
+    <div class="card">
+      <details class="collapse-section" id="introduction">
+        <summary>1. Introduction</summary>
+        <div class="collapse-content">
+          <p>Welcome to TenAi's Studio ("we", "our", or "us"). Your privacy matters to us. This Privacy Policy explains, in simple terms, how we collect, use, and protect your information when you use the TenAi's Studio app and related services.</p>
+          <p>TenAi's Studio is a platform designed to help users organize, participate in, and manage hackathons, including team collaboration, project submissions, and evaluations. By using our app, you agree to the practices described in this policy.</p>
         </div>
-      </div>
+      </details>
+
+      <details class="collapse-section" id="information-we-collect">
+        <summary>2. Information We Collect</summary>
+        <div class="collapse-content">
+          <p>We collect only the information necessary to operate and improve the platform. This may include:</p>
+          <ul>
+            <li>Account information such as your name, email address, and role within the app</li>
+            <li>Profile details you choose to provide, like a bio, skills, education, or social links</li>
+            <li>Hackathon activity data, including team participation, submissions, and evaluations</li>
+            <li>Files and media you upload, such as profile images or project documents</li>
+            <li>Basic technical information, such as device and log data, used to keep the app secure and running smoothly</li>
+          </ul>
+          <p>We do not collect unnecessary data such as contacts, precise location, call logs, messages, or payment information.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="how-we-use">
+        <summary>3. How We Use Your Information</summary>
+        <div class="collapse-content">
+          <p>We use your information to:</p>
+          <ul>
+            <li>Create and manage your account</li>
+            <li>Enable hackathon participation, team collaboration, and project submissions</li>
+            <li>Display profiles and leaderboards within hackathons</li>
+            <li>Send important account-related communications</li>
+            <li>Maintain platform security and prevent misuse</li>
+            <li>Improve the reliability and performance of our services</li>
+          </ul>
+          <p>We do not use your data for advertising or marketing purposes.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="sharing">
+        <summary>4. Sharing of Information</summary>
+        <div class="collapse-content">
+          <p>We do not sell your personal data.</p>
+          <p>Your information may be shared only:</p>
+          <ul>
+            <li>With trusted service providers who help us run the app (such as hosting and email services)</li>
+            <li>With other users inside a hackathon context (for example, team members or judges viewing relevant submissions)</li>
+            <li>When required by law or to protect the safety and integrity of our platform</li>
+          </ul>
+          <p>All partners are required to follow appropriate privacy and security standards.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="security">
+        <summary>5. Data Security</summary>
+        <div class="collapse-content">
+          <p>We take reasonable and industry-standard measures to protect your information from unauthorized access, loss, or misuse. While no digital system can be guaranteed to be 100% secure, we work hard to always safeguard your data.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="retention">
+        <summary>6. Data Retention and Account Deletion</summary>
+        <div class="collapse-content">
+          <p>We keep your information only for as long as it is needed to provide our services or comply with legal requirements. You may request account deletion at any time, after which your personal data will be removed or anonymized where appropriate.</p>
+          <p><strong>How to request account deletion:</strong> Send an email to <a href="mailto:support@tenais.co.in">support@tenais.co.in</a> with the subject line <strong>"Account Deletion"</strong> to initiate the deletion process. If the information you provide matches our records, we will delete your account within 7–14 days.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="your-rights">
+        <summary>7. Your Rights and Choices</summary>
+        <div class="collapse-content">
+          <p>You have the right to:</p>
+          <ul>
+            <li>Access and update your personal information</li>
+            <li>Request deletion of your account</li>
+            <li>Withdraw consent for optional information</li>
+            <li>Request a copy of your data</li>
+          </ul>
+          <p>You can manage most of your information directly within the app. For additional requests, you can contact us using the details below.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="children">
+        <summary>8. Children's Privacy</summary>
+        <div class="collapse-content">
+          <p>TenAi's Studio is not intended for children under the age of 13. We do not knowingly collect personal data from children. If you believe a child has provided us with information, please contact us and we will take appropriate action.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="changes">
+        <summary>9. Changes to This Policy</summary>
+        <div class="collapse-content">
+          <p>We may update this Privacy Policy from time to time. When we do, we'll update the "Last updated" date and notify users if the changes are significant. Continued use of the app means you accept the updated policy.</p>
+        </div>
+      </details>
+
+      <details class="collapse-section" id="contact">
+        <summary>10. Contact Us</summary>
+        <div class="collapse-content">
+          <p>If you have questions or concerns about this Privacy Policy or your data, you can contact us at:</p>
+          <p><strong>Email:</strong> <a href="mailto:support@tenais.co.in">support@tenais.co.in</a></p>
+          <p>We aim to respond promptly to all privacy-related inquiries.</p>
+        </div>
+      </details>
     </div>
   </main>
   <footer>
